@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Instalación</title>
+
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./images/logos/Unir.svg" alt="Home Icon" width="250" height="40" />
+                    </a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_2">Explorar Temas</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_3">Conclusiones</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_4">FAQs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_5">Contacto</a>
+                            </li>
+                        </ul>
+<!--
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    -->
+                    </div>
+                </div>
+            </nav>
+            
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-5 col-12 mb-5">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+
+                                    <li class="breadcrumb-item active" aria-current="page">Instalación</li>
+                                </ol>
+                            </nav>
+
+                            <h2 class="text-white">Instalación<br>de<br>AngularJS</h2>
+
+                            <div class="d-flex align-items-center mt-5">
+                                <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Leer más</a>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12">
+                            <div class="topics-detail-block bg-white shadow-lg">
+                                <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="topics-detail-block-image img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="topics-detail-section section-padding" id="topics-detail">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 m-auto">
+                            <h3 class="mb-4" id="section_2.1">2.1 ¿Se precisa instalación?</h3>
+
+                            <p>AngularJS no requiere instalación tradicional como otros frameworks. Puede utilizarse directamente desde una red de distribución de contenido (CDN) o descargarse localmente para integrarlo en un proyecto. La opción de usar la CDN permite acceder rápidamente al framework sin tener que almacenar archivos en el proyecto, lo que resulta ideal para proyectos pequeños o prototipos. Por otro lado, la descarga local es preferible en proyectos que necesitan mayor control sobre las dependencias o que no tienen acceso constante a internet.</p>
+
+                            <br>
+
+                            <h3 class="mb-4" id="section_2.2">2.2 Pasos para realizar la instalación</h3>
+
+
+                            <p>El primer paso para instalar AngularJS es descargar el archivo desde su <a href="https://angularjs.org/">página oficial</a> o utilizar el enlace proporcionado por una CDN. Una vez obtenido el archivo, debe incluirse en el proyecto mediante la etiqueta <code>&lt;script&gt;</code> en el archivo HTML principal. Por ejemplo:</p>
+
+                            <pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                            <p>Una vez integrado, es posible verificar que la instalación fue exitosa comprobando la versión instalada en la consola del navegador ejecutando el comando <code>angular.version</code>.</p>
+
+                            <br>
+
+                            <p><strong>Versiones necesarias</strong> </p>
+
+                            <p>AngularJS es compatible con navegadores modernos, lo que garantiza su funcionalidad en la mayoría de los entornos actuales. Sin embargo, es importante asegurarse de que la versión seleccionada cumpla con los requisitos específicos del proyecto, especialmente si se trabaja con sistemas legados.</p>
+
+                            <br>
+
+                            <p><strong>Rutas para tener en cuenta</strong> </p>
+
+                            <p>Al descargar localmente AngularJS, el archivo debe almacenarse en una ubicación accesible dentro del proyecto, como una carpeta <code>js</code> o <code>lib</code>. Además, si el proyecto utiliza un servidor, las rutas deben configurarse correctamente para que el archivo sea accesible desde el navegador.</p>
+
+                            <br>
+
+                            <p><strong>Variables de entorno</strong> </p>
+
+                            <p>Aunque AngularJS no requiere configuraciones de variables de entorno específicas, es común diferenciar entre entornos de desarrollo y producción. Por ejemplo, en desarrollo, los archivos pueden estar descomprimidos para facilitar la depuración, mientras que en producción se recomienda utilizar la versión comprimida para mejorar el rendimiento.</p>
+
+                            <br>
+
+                            <h3 class="mb-4" id="section_2.3">2.3 ¿Necesita base de datos?</h3>
+
+                            <p>AngularJS no incluye un sistema de gestión de bases de datos integrado, pero es altamente compatible con servicios REST, lo que lo hace ideal para trabajar con datos dinámicos desde un servidor backend. Puede integrarse fácilmente con plataformas como Firebase, MongoDB o cualquier otro sistema que proporcione una API RESTful. Estas integraciones permiten manejar datos dinámicos en tiempo real, una característica especialmente útil para aplicaciones modernas.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-5 col-12">
+                            <img src="images/rear-view-young-college-student.jpg" class="newsletter-image img-fluid" alt="">
+                        </div>
+
+                        <div class="col-lg-5 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
+                            <form class="custom-form subscribe-form" action="#" method="post" role="form">
+                                <h4 class="mb-4 pb-2">Suscríbete al Boletín</h4>
+
+                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Correo Electrónico" required="">
+
+                                <div class="col-lg-12 col-12">
+                                    <button type="submit" class="form-control">Suscribirse</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+		
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="./images/logos/Unir.svg" alt="Home Icon" width="250" height="40" />
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Recursos</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="index.html#" class="site-footer-link">Home</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="index.html#section_3" class="site-footer-link">Conclusiones del Tutorial</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="index.html#section_4" class="site-footer-link">FAQs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="index.html#section_5" class="site-footer-link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Contacto</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                655-240-9671
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                info@correo.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Español</button>
+
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">English</button></li>
+                            </ul>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2024 UNIR. All rights reserved.</p>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
