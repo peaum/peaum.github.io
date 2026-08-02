@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact | Peace Umolu</title>
+	<title>Blog Entry | Peace Umolu</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,28 +27,33 @@
 			<li>
 				<a href="gallery.html">projects</a>
 			</li>
-			<li>
+			<li class="selected">
 				<a href="blog.html">blog</a>
 			</li>
-			<li class="selected">
+			<li>
 				<a href="contact.html">contact</a>
 			</li>
 		</ul>
 	</div>
 	<div id="body">
-		<h1><span>Let&apos;s Build Something Reliable</span></h1>
-		<form action="contact.html">
-			<input type="text" name="fname" id="fname" value="name" aria-label="Name">
-			<input type="text" name="subject" id="subject" value="subject" aria-label="Subject">
-			<input type="text" name="email" id="email" value="email" aria-label="Email">
-			<textarea name="message" id="message" aria-label="Message">message</textarea>
-			<input type="submit" name="send" id="send" value="Send Message">
-		</form>
-		<div class="contact-info">
-			<h3>Contact Information</h3>
-			<p>Email: <a href="mailto:peace.umollu@gmail.com">peace.umollu@gmail.com</a></p>
-			<p>LinkedIn: <a href="https://www.linkedin.com/in/peace-umollu/" target="_blank" rel="noopener noreferrer">linkedin.com/in/peace-umollu</a></p>
-			<p>GitHub: <a href="https://github.com/peaceumollu" target="_blank" rel="noopener noreferrer">github.com/peaceumollu</a></p>
+		<h1><span>Blog Entry</span></h1>
+		<div>
+			<img src="images/journal-adc.svg" alt="ADC configuration notes and measurement output visuals">
+			<div class="article">
+				<h2>UNDERSTANDING THE 16-BIT ADC ON ADUCM410</h2>
+				<p>
+					The ADUCM410 ADC can deliver excellent performance when reference quality, acquisition windows, and conversion timing are tuned for your source impedance. In this write-up, I walk through the register sequence and practical initialization path I use for stable startup behavior.
+				</p>
+				<p>
+					A key lesson is that precision depends on firmware discipline as much as silicon capability: schedule conversions away from high-noise switching events, average intelligently, and maintain calibration constants in nonvolatile storage.
+				</p>
+				<p>
+					I also compare interrupt-driven and DMA-driven collection paths and show where each model wins depending on bandwidth, latency, and CPU budget constraints in a Cortex-M33 system.
+				</p>
+				<p>
+					<a href="blog.html" class="more">Back to Blog &#8594;</a>
+				</p>
+			</div>
 		</div>
 	</div>
 	<div id="footer" class="footer">

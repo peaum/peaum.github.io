@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Embedded systems hero graphic</title>
+  <desc id="desc">Stylized microcontroller board with waveform and bus traces.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10205d"/>
+      <stop offset="1" stop-color="#1f6bb2"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00bcd4"/>
+      <stop offset="1" stop-color="#00acc1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bg)"/>
+  <g opacity="0.25" stroke="#4dd0e1" stroke-width="2">
+    <path d="M0 130h1600M0 250h1600M0 370h1600M0 490h1600M0 610h1600"/>
+    <path d="M120 0v700M320 0v700M520 0v700M720 0v700M920 0v700M1120 0v700M1320 0v700M1520 0v700"/>
+  </g>
+  <g transform="translate(360 160)">
+    <rect x="0" y="0" width="880" height="380" rx="24" fill="#0f1b4c" stroke="#4dd0e1" stroke-width="4"/>
+    <rect x="250" y="80" width="380" height="220" rx="18" fill="url(#chip)"/>
+    <g fill="#0f1b4c">
+      <rect x="285" y="115" width="310" height="20" rx="10"/>
+      <rect x="285" y="155" width="310" height="20" rx="10"/>
+      <rect x="285" y="195" width="210" height="20" rx="10"/>
+      <rect x="285" y="235" width="250" height="20" rx="10"/>
+    </g>
+    <g fill="#ffc107">
+      <rect x="180" y="110" width="44" height="12" rx="6"/>
+      <rect x="180" y="140" width="44" height="12" rx="6"/>
+      <rect x="180" y="170" width="44" height="12" rx="6"/>
+      <rect x="180" y="200" width="44" height="12" rx="6"/>
+      <rect x="656" y="110" width="44" height="12" rx="6"/>
+      <rect x="656" y="140" width="44" height="12" rx="6"/>
+      <rect x="656" y="170" width="44" height="12" rx="6"/>
+      <rect x="656" y="200" width="44" height="12" rx="6"/>
+    </g>
+  </g>
+  <path d="M120 600 C240 560, 360 640, 480 600 S720 560, 840 600 S1080 640, 1200 600 S1440 560, 1560 600" fill="none" stroke="#ffc107" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+}
+
+.download-wrap {
+    margin: 14px auto 0;
+    max-width: 860px;
+    padding: 0 22px;
+    text-align: center;
+}
+
+.download-pdf {
+    background: #0d47a1;
+    border: 1px solid #0d47a1;
+    border-radius: 999px;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+    padding: 8px 14px;
+    text-decoration: none;
+}
+
+.download-pdf:hover {
+    background: #00bcd4;
+    border-color: #00bcd4;
+    color: #ffffff !important;
+}
+
+#title-block-header,
+h2,
+h3,
+ul,
+ol,
+table,
+div.sourceCode,
+.callout {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 860px;
+}
+
+#title-block-header {
+    margin: 26px auto 12px;
+    padding: 0 22px;
+    text-align: center;
+}
+
+.title {
+    color: #1a237e;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+}
+
+#title-block-header .author,
+#title-block-header .date {
+    text-align: center;
+}
+
+h2,
+h3 {
+    color: #1a237e;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    margin-top: 22px;
+    padding: 0 22px;
+}
+
+p,
+li,
+td,
+th {
+    color: #1f2d3a;
+    line-height: 1.7;
+}
+
+p {
+    margin: 0 3cm 24px !important;
+    padding: 0 !important;
+}
+
+ul,
+ol,
+table,
+div.sourceCode,
+.callout {
+    padding: 0 22px;
+}
+
+ul,
+ol {
+    padding-left: 44px;
+}
+
+a {
+    color: #0d47a1;
+}
+
+a:hover {
+    color: #00bcd4;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 6px;
+    margin-bottom: 14px;
+}
+
+table th {
+    background: #e8f1ff;
+    border-bottom: 2px solid #c9daf7;
+    color: #1a237e;
+    font-weight: 700;
+}
+
+table td,
+table th {
+    border: 1px solid #dbe6fb;
+    padding: 8px 10px;
+}
+
+.callout {
+    background: #ffffff;
+    border: 1px solid #cfe0ff;
+    border-left: 4px solid #0d47a1;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(13, 35, 86, 0.12);
+    margin-top: 12px;
+    margin-bottom: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+div.sourceCode,
+pre.sourceCode {
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+
+.mermaid {
+    background: #ffffff;
+    border: 1px solid #dbe6fb;
+    border-radius: 10px;
+    margin: 12px auto 20px;
+    max-width: 860px;
+    padding: 14px;
+}
+
+p img {
+    border: 1px solid #dbe6fb;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(13, 35, 86, 0.12);
+    display: block;
+    margin: 6px auto 12px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .download-wrap {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    #title-block-header,
+    h2,
+    h3,
+    ul,
+    ol,
+    table,
+    div.sourceCode,
+    .callout {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    p {
+        margin: 0 14px 24px !important;
+    }
+}

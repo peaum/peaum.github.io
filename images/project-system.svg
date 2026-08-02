@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Complete integrated system visual</title>
+  <desc id="desc">Connected modules for sensors, memory, and RTOS tasks.</desc>
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a237e"/>
+      <stop offset="1" stop-color="#263238"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#g3)"/>
+  <g fill="#ffffff" opacity="0.92">
+    <rect x="80" y="80" width="170" height="100" rx="12"/>
+    <rect x="380" y="80" width="170" height="100" rx="12"/>
+    <rect x="80" y="240" width="170" height="100" rx="12"/>
+    <rect x="380" y="240" width="170" height="100" rx="12"/>
+    <rect x="250" y="150" width="140" height="120" rx="12" fill="#00bcd4"/>
+  </g>
+  <g stroke="#ffc107" stroke-width="4" fill="none">
+    <path d="M250 130H180V180"/>
+    <path d="M390 130H460V180"/>
+    <path d="M250 290H180V240"/>
+    <path d="M390 290H460V240"/>
+  </g>
+  <text x="165" y="138" text-anchor="middle" fill="#1a237e" font-family="Montserrat, sans-serif" font-size="18" font-weight="700">ADC</text>
+  <text x="465" y="138" text-anchor="middle" fill="#1a237e" font-family="Montserrat, sans-serif" font-size="18" font-weight="700">SPI/I2C</text>
+  <text x="165" y="298" text-anchor="middle" fill="#1a237e" font-family="Montserrat, sans-serif" font-size="18" font-weight="700">Memory</text>
+  <text x="465" y="298" text-anchor="middle" fill="#1a237e" font-family="Montserrat, sans-serif" font-size="18" font-weight="700">Tasks</text>
+  <text x="320" y="214" text-anchor="middle" fill="#ffffff" font-family="Montserrat, sans-serif" font-size="24" font-weight="700">RTOS</text>
+</svg>

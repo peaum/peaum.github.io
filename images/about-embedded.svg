@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">About embedded engineer visual</title>
+  <desc id="desc">Profile card with tools and development timeline markers.</desc>
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a237e"/>
+      <stop offset="1" stop-color="#00bcd4"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="520" fill="url(#g4)"/>
+  <rect x="70" y="70" width="820" height="380" rx="20" fill="#ffffff" opacity="0.94"/>
+  <circle cx="220" cy="210" r="78" fill="#1a237e"/>
+  <rect x="360" y="135" width="420" height="24" rx="12" fill="#1a237e"/>
+  <rect x="360" y="180" width="370" height="20" rx="10" fill="#00bcd4"/>
+  <rect x="360" y="218" width="420" height="20" rx="10" fill="#d6f5f9"/>
+  <rect x="360" y="256" width="340" height="20" rx="10" fill="#d6f5f9"/>
+  <g fill="#ffc107">
+    <rect x="130" y="330" width="90" height="12" rx="6"/>
+    <rect x="240" y="330" width="90" height="12" rx="6"/>
+    <rect x="350" y="330" width="90" height="12" rx="6"/>
+    <rect x="460" y="330" width="90" height="12" rx="6"/>
+    <rect x="570" y="330" width="90" height="12" rx="6"/>
+    <rect x="680" y="330" width="90" height="12" rx="6"/>
+  </g>
+  <text x="480" y="438" text-anchor="middle" fill="#1a237e" font-family="Montserrat, sans-serif" font-size="34" font-weight="700">Embedded Systems Journey</text>
+</svg>

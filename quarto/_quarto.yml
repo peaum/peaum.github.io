@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: ../blog/blog(1)
+
+website:
+  title: "Peace Umolu"
+  search: false
+  page-footer:
+    left: "© 2026 Peace Umolu"
+    right: "Embedded Systems Developer"
+
+format:
+  html:
+    toc: false
+    css:
+      - ../css/style.css
+      - ../css/quarto.css
+    include-before-body: _includes/navbar.html
+    code-fold: show
+    theme: none
+

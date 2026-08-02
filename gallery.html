@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact | Peace Umolu</title>
+	<title>Projects | Peace Umolu</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,32 +24,45 @@
 			<li>
 				<a href="about.html">about</a>
 			</li>
-			<li>
+			<li class="selected">
 				<a href="gallery.html">projects</a>
 			</li>
 			<li>
 				<a href="blog.html">blog</a>
 			</li>
-			<li class="selected">
+			<li>
 				<a href="contact.html">contact</a>
 			</li>
 		</ul>
 	</div>
 	<div id="body">
-		<h1><span>Let&apos;s Build Something Reliable</span></h1>
-		<form action="contact.html">
-			<input type="text" name="fname" id="fname" value="name" aria-label="Name">
-			<input type="text" name="subject" id="subject" value="subject" aria-label="Subject">
-			<input type="text" name="email" id="email" value="email" aria-label="Email">
-			<textarea name="message" id="message" aria-label="Message">message</textarea>
-			<input type="submit" name="send" id="send" value="Send Message">
-		</form>
-		<div class="contact-info">
-			<h3>Contact Information</h3>
-			<p>Email: <a href="mailto:peace.umollu@gmail.com">peace.umollu@gmail.com</a></p>
-			<p>LinkedIn: <a href="https://www.linkedin.com/in/peace-umollu/" target="_blank" rel="noopener noreferrer">linkedin.com/in/peace-umollu</a></p>
-			<p>GitHub: <a href="https://github.com/peaceumollu" target="_blank" rel="noopener noreferrer">github.com/peaceumollu</a></p>
-		</div>
+		<h1><span>Projects</span></h1>
+		<ul class="gallery">
+			<li>
+				<a href="gallery-single-post.html" class="project-tile">
+					<img src="images/project-foundation.svg" alt="Board bring-up and debugger toolchain project visual">
+					<span>Foundation &amp; Toolchain Mastery</span>
+					<small>Keil, J-Link, startup flow, and GPIO verification.</small>
+					<strong>View Case Study &#8594;</strong>
+				</a>
+			</li>
+			<li>
+				<a href="gallery-single-post.html" class="project-tile">
+					<img src="images/project-analog.svg" alt="High-precision ADC and DAC firmware project visual">
+					<span>High-Precision Analog</span>
+					<small>16-bit ADC capture, DAC synthesis, and filtering strategy.</small>
+					<strong>View Case Study &#8594;</strong>
+				</a>
+			</li>
+			<li>
+				<a href="gallery-single-post.html" class="project-tile">
+					<img src="images/project-system.svg" alt="Integrated RTOS and sensor architecture project visual">
+					<span>Complete Integrated System</span>
+					<small>ADC, SPI/I2C sensors, memory management, and RTOS.</small>
+					<strong>View Case Study &#8594;</strong>
+				</a>
+			</li>
+		</ul>
 	</div>
 	<div id="footer" class="footer">
 		<div>

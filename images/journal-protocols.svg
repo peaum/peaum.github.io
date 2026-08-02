@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">SPI vs I2C journal visual</title>
+  <desc id="desc">Two protocol timing blocks and comparison traces.</desc>
+  <rect width="760" height="420" fill="#1a237e"/>
+  <rect x="55" y="55" width="650" height="310" rx="16" fill="#ffffff" opacity="0.95"/>
+  <rect x="95" y="95" width="260" height="230" rx="12" fill="#e5f8fc"/>
+  <rect x="405" y="95" width="260" height="230" rx="12" fill="#fff7df"/>
+  <text x="225" y="138" text-anchor="middle" fill="#007a8c" font-family="Montserrat, sans-serif" font-size="30" font-weight="700">SPI</text>
+  <text x="535" y="138" text-anchor="middle" fill="#a17400" font-family="Montserrat, sans-serif" font-size="30" font-weight="700">I2C</text>
+  <g stroke="#00bcd4" stroke-width="5" fill="none">
+    <path d="M120 190h40v30h40v-30h40v30h40v-30h40"/>
+  </g>
+  <g stroke="#ffc107" stroke-width="5" fill="none">
+    <path d="M430 190h40v20h40v-20h40v20h40v-20h40"/>
+  </g>
+  <text x="380" y="344" text-anchor="middle" fill="#1a237e" font-family="Montserrat, sans-serif" font-size="28" font-weight="700">Protocol Selection Tradeoffs</text>
+</svg>
