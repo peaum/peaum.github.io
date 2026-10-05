@@ -1,0 +1,21 @@
+---
+title: "Foundation and Toolchain"
+description: "Keil MDK, J-Link debugging, startup validation, and deterministic GPIO bring-up."
+categories: [embedded-systems, firmware, debugging]
+---
+
+## Overview
+
+This project established a repeatable Cortex-M33 development workflow, from
+toolchain setup and startup code through debugger-based board bring-up.
+
+## Implementation
+
+- Configured the Keil MDK project and device startup flow.
+- Validated J-Link programming and source-level debugging.
+- Verified GPIO behavior as an early hardware and firmware integration check.
+
+## Outcome
+
+The result is a known-good foundation for adding peripherals and building
+firmware features with a reliable debug cycle.

@@ -1,0 +1,17 @@
+---
+title: "Blog"
+description: "Notes, guides, and lessons from embedded systems and computer engineering."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  fields:
+    - title
+    - date
+    - author
+    - categories
+    - description
+---
+
+New articles added to `quarto/blog/posts/` appear here automatically after building the site.

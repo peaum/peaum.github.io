@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: generated
+  render:
+    - quarto/blog
+    - quarto/projects
+
+website:
+  title: "Peace Umolu"
+  site-url: "https://peaum.github.io/generated/"
+  search: false
+  page-footer:
+    left: "© 2026 Peace Umolu"
+    right: "Embedded Systems Developer"
+
+format:
+  html:
+    toc: true
+    css: quarto/quarto-content.css
+    include-before-body: quarto/_includes/navbar.html
+    code-fold: show
+    theme: cosmo

@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/quarto/projects/index.html",
+    "items": [
+      "/quarto/projects/case-studies/integrated-system.html",
+      "/quarto/projects/case-studies/foundation-toolchain.html",
+      "/quarto/projects/case-studies/high-precision-analog.html"
+    ]
+  },
+  {
+    "listing": "/quarto/blog/index.html",
+    "items": [
+      "/quarto/blog/posts/embedded-bring-up-notes.html"
+    ]
+  }
+]

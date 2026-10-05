@@ -1,0 +1,24 @@
+---
+title: "Notes on a Repeatable Embedded Bring-Up"
+author: "Peace Umolu"
+date: 2026-10-05
+description: "A short overview of the steps that make early firmware and board validation repeatable."
+categories: [embedded-systems, firmware, debugging]
+---
+
+Early board bring-up is easier to debug when each step produces a result that
+can be checked independently. I start by confirming the toolchain and startup
+flow, then verify a simple GPIO behavior before adding peripheral drivers.
+
+## A small, useful sequence
+
+1. Build the unmodified startup project and keep the linker output available.
+2. Program the board and confirm that the debugger can halt and inspect the
+   expected target.
+3. Exercise one GPIO and verify its state at the pin.
+4. Add one peripheral at a time, checking configuration and data transfer
+   before integrating the next component.
+
+This sequence keeps toolchain, board, and application problems easier to
+separate. As project-specific test results become available, this note can be
+expanded with measurements, schematics, and code examples.

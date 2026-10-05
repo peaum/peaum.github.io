@@ -1,6 +1,6 @@
 // Firebase web configuration is public; access is enforced by Authentication and Firestore rules.
 window.PARALEARN_FIREBASE_CONFIG = {
-	apiKey: "AIzaSyD2PNnJm5usLyrAFl_ollq9tK6Kv1QRCTU",
+	apiKey: "",
 	authDomain: "para-2d5fd.firebaseapp.com",
 	projectId: "para-2d5fd",
 	storageBucket: "para-2d5fd.firebasestorage.app",

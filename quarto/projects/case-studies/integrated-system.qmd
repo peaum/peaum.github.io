@@ -1,0 +1,22 @@
+---
+title: "Complete Integrated System"
+description: "An integrated firmware architecture combining analog capture, sensors, and RTOS tasks."
+categories: [embedded-systems, RTOS, system-design]
+---
+
+## Overview
+
+This project brings the measurement pipeline and peripheral interfaces
+together in a production-oriented embedded system architecture.
+
+## Implementation
+
+- Combined ADC acquisition with SPI and I2C sensor interfaces.
+- Organized processing and communication into RTOS-managed tasks.
+- Planned buffers and telemetry for predictable operation and diagnostics.
+
+## Outcome
+
+The integrated design provides a foundation for long-run validation and
+system-level testing. Add specific timing, reliability, and resource
+measurements here as they become available.

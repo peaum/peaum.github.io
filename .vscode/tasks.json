@@ -2,15 +2,20 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Render blog(1) HTML+PDF to blog(1) folder",
-      "type": "shell",
-      "command": "cmd",
+      "label": "Build portfolio and Quarto content",
+      "type": "process",
+      "command": "powershell.exe",
       "args": [
-        "/d",
-        "/c",
-        "cd /d quarto && quarto render blog1.qmd --to html --output blog1.html && quarto render blog1.qmd --to pdf --output blog1.pdf && if not exist \"..\\blog\\css\" mkdir \"..\\blog\\css\" && copy /y \"..\\css\\style.css\" \"..\\blog\\css\\style.css\" && copy /y \"..\\css\\quarto.css\" \"..\\blog\\css\\quarto.css\" && copy /y \"..\\blog\\blog(1)\\blog1.html\" \"..\\blog\\blog(1)\\blog(1).html\" && copy /y \"..\\blog\\blog(1)\\blog1.pdf\" \"..\\blog\\blog(1)\\blog(1).pdf\" && if exist \"..\\blog\\blog(1)\\blog1.html\" del /q \"..\\blog\\blog(1)\\blog1.html\" && if exist \"..\\blog\\blog(1)\\blog1.pdf\" del /q \"..\\blog\\blog(1)\\blog1.pdf\""
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\build-quarto.ps1"
       ],
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "problemMatcher": []
     }
   ]

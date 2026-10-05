@@ -1,0 +1,22 @@
+---
+title: "High-Precision Analog"
+description: "Calibrated 16-bit ADC sampling, DAC waveform output, and digital filtering."
+categories: [embedded-systems, analog, firmware]
+---
+
+## Overview
+
+This project focuses on a precise embedded signal chain, from analog input
+sampling through signal processing and waveform generation.
+
+## Implementation
+
+- Added 16-bit ADC capture and calibration.
+- Implemented DAC output for waveform generation.
+- Applied digital filtering to improve measurement stability.
+
+## Outcome
+
+The work provides a structured path to low-noise measurements and repeatable
+analog validation. Add measured results, hardware details, and test conditions
+here as the project documentation develops.
