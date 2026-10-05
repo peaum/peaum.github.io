@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Review study points with spaced repetition and AI-assisted paraphrase feedback.">
+	<title>Para-Learn | Peace Umolu</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 568px)">
+	<link rel="stylesheet" href="css/paralearn.css">
+	<script src="js/mobile.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js" defer></script>
+	<script src="paralearn-config.js" defer></script>
+	<script src="paralearn.js" defer></script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html" class="logo" aria-label="Peace Umolu home">
+			<span class="brand-name">Peace Umolu</span>
+			<span class="brand-tagline">Electronics &amp; Computer Systems Engineer | Embedded Systems Developer</span>
+		</a>
+		<ul id="navigation" class="nav-menu">
+			<li><a href="index.html">home</a></li>
+			<li><a href="about.html">about</a></li>
+			<li><a href="gallery.html">projects</a></li>
+			<li class="selected"><a href="paralearn.html" aria-current="page">Para-Learn</a></li>
+			<li><a href="contact.html">contact</a></li>
+		</ul>
+	</div>
+	<main id="paralearn" class="pl-page">
+		<section class="pl-intro">
+			<p class="pl-eyebrow">Spaced repetition · Active recall</p>
+			<h1>Para-Learn</h1>
+			<p>Explain each idea in your own words. Get feedback, strengthen your understanding, and review it again at the right time.</p>
+		</section>
+
+		<p id="app-status" class="pl-status" role="status" aria-live="polite"></p>
+
+		<section id="login-panel" class="pl-panel pl-login" aria-labelledby="login-heading">
+			<h2 id="login-heading">Sign in to your study space</h2>
+			<p>Your decks and review schedule are saved privately to your account.</p>
+			<button id="google-sign-in" class="pl-button pl-button-primary" type="button">Continue with Google</button>
+			<p class="pl-setup-note">Firebase must be configured for this site before sign-in is available. See <a href="PARA-LEARN-SETUP.md">the setup guide</a>.</p>
+		</section>
+
+		<section id="study-app" class="pl-app" hidden>
+			<div class="pl-account">
+				<p>Signed in as <strong id="account-email"></strong></p>
+				<div class="pl-account-actions">
+					<button id="settings-button" class="pl-button pl-button-secondary" type="button">AI settings</button>
+					<button id="sign-out" class="pl-button pl-button-secondary" type="button">Sign out</button>
+				</div>
+			</div>
+
+			<div class="pl-columns">
+				<aside class="pl-panel pl-sidebar" aria-labelledby="deck-heading">
+					<h2 id="deck-heading">Your study decks</h2>
+					<label for="deck-select">Add a point to</label>
+					<select id="deck-select"></select>
+					<form id="deck-form" class="pl-inline-form">
+						<label for="deck-title">Create a deck</label>
+						<div class="pl-inline-controls">
+							<input id="deck-title" type="text" maxlength="80" placeholder="e.g. Linear algebra" required>
+							<button class="pl-button pl-button-primary" type="submit">Add deck</button>
+						</div>
+					</form>
+					<form id="point-form" class="pl-point-form">
+						<label for="source-text">Add a study point</label>
+						<textarea id="source-text" rows="5" maxlength="5000" placeholder="Enter a definition, theorem, or idea to learn." required></textarea>
+						<button class="pl-button pl-button-primary" type="submit">Save study point</button>
+					</form>
+				</aside>
+
+				<section class="pl-panel pl-review" aria-labelledby="review-heading">
+					<div class="pl-review-heading">
+						<div>
+							<p class="pl-eyebrow">Due for review</p>
+							<h2 id="review-heading">Recall the idea</h2>
+						</div>
+						<span id="due-count" class="pl-count" aria-live="polite"></span>
+					</div>
+					<div id="empty-queue" class="pl-empty" hidden>
+						<h3>You’re all caught up</h3>
+						<p>Add a study point or come back when your next review is due.</p>
+					</div>
+					<div id="review-card" hidden>
+						<p class="pl-card-prompt">Paraphrase the concept in your own words. Focus on the meaning, not the exact phrasing.</p>
+						<form id="answer-form">
+							<label for="paraphrase">Your paraphrase</label>
+							<textarea id="paraphrase" rows="6" maxlength="5000" placeholder="Write your explanation here..." required></textarea>
+							<button id="evaluate-answer" class="pl-button pl-button-primary" type="submit">Check my understanding</button>
+						</form>
+						<div id="evaluation-result" class="pl-feedback" role="status" aria-live="polite" hidden>
+							<h3 id="feedback-heading"></h3>
+							<p id="feedback-text"></p>
+							<details class="pl-original">
+								<summary>Show the original study point</summary>
+								<p id="original-text"></p>
+							</details>
+						</div>
+						<div id="rating-controls" class="pl-rating" hidden>
+							<p>How well did you recall it?</p>
+							<button class="pl-button pl-button-again" data-rating="again" type="button">Again</button>
+							<button class="pl-button pl-button-good" data-rating="good" type="button">Good</button>
+							<button class="pl-button pl-button-easy" data-rating="easy" type="button">Easy</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+	</main>
+
+	<dialog id="settings-dialog" class="pl-dialog" aria-labelledby="settings-heading">
+		<form id="settings-form" method="dialog">
+			<h2 id="settings-heading">AI settings</h2>
+			<p>Your Gemini API key is saved in this browser only. Anyone using this browser profile can access it; avoid shared devices.</p>
+			<label for="gemini-key">Gemini API key</label>
+			<input id="gemini-key" type="password" autocomplete="off" spellcheck="false">
+			<div class="pl-dialog-actions">
+				<button id="remove-key" class="pl-button pl-button-secondary" type="button">Remove key</button>
+				<button class="pl-button pl-button-primary" type="submit">Save key</button>
+				<button id="close-settings" class="pl-button pl-button-secondary" type="button">Cancel</button>
+			</div>
+		</form>
+	</dialog>
+</body>
+</html>

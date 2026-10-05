@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/decks/{deckId} {
+      allow read, delete: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.userId == userId
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 80;
+      allow update: if request.auth != null
+        && request.auth.uid == userId
+        && resource.data.userId == userId
+        && request.resource.data.userId == userId
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 80;
+    }
+
+    match /users/{userId}/points/{pointId} {
+      allow read, delete: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.userId == userId
+        && request.resource.data.deckId is string
+        && request.resource.data.sourceText is string
+        && request.resource.data.sourceText.size() > 0
+        && request.resource.data.sourceText.size() <= 5000
+        && request.resource.data.interval is number
+        && request.resource.data.repetitions is number
+        && request.resource.data.easeFactor is number
+        && request.resource.data.dueDate is timestamp;
+      allow update: if request.auth != null
+        && request.auth.uid == userId
+        && resource.data.userId == userId
+        && request.resource.data.userId == userId
+        && request.resource.data.deckId == resource.data.deckId
+        && request.resource.data.sourceText == resource.data.sourceText
+        && request.resource.data.interval is number
+        && request.resource.data.repetitions is number
+        && request.resource.data.easeFactor is number
+        && request.resource.data.dueDate is timestamp;
+    }
+  }
+}
