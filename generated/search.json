@@ -4,21 +4,21 @@
     "href": "quarto/projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Peace Umolu\n\n\t\tElectronics & Computer Systems Engineer | Embedded Systems Developer\n\n\t\n\n\t\n\n\t\tHome\n\n\t\tAbout\n\n\t\tProjects\n\n\t\tBlog\n\n\t\tPara-Learn\n\n\t\tContact\n\n\t\n\n\n\n\n\n\n\nAdd project documentation as .qmd files in quarto/projects/case-studies/. Each published project links directly to its complete case study.\n\n\n\n\n\n\n\n\n\nComplete Integrated System\n\n\n\nembedded-systems\n\nRTOS\n\nsystem-design\n\n\n\nAn integrated firmware architecture combining analog capture, sensors, and RTOS tasks.\n\n\n\n\n\n\n\n\n\n\nFoundation and Toolchain\n\n\n\nembedded-systems\n\nfirmware\n\ndebugging\n\n\n\nKeil MDK, J-Link debugging, startup validation, and deterministic GPIO bring-up.\n\n\n\n\n\n\n\n\n\n\nHigh-Precision Analog\n\n\n\nembedded-systems\n\nanalog\n\nfirmware\n\n\n\nCalibrated 16-bit ADC sampling, DAC waveform output, and digital filtering.\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Complete Integrated System\n\n\n\nembedded-systems\n\nRTOS\n\nsystem-design\n\n\n\nAn integrated firmware architecture combining analog capture, sensors, and RTOS tasks.\n\n\n\n\n\n\n\n\n\n\n\n\nFoundation and Toolchain\n\n\n\nembedded-systems\n\nfirmware\n\ndebugging\n\n\n\nKeil MDK, J-Link debugging, startup validation, and deterministic GPIO bring-up.\n\n\n\n\n\n\n\n\n\n\n\n\nHigh-Precision Analog\n\n\n\nembedded-systems\n\nanalog\n\nfirmware\n\n\n\nCalibrated 16-bit ADC sampling, DAC waveform output, and digital filtering.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "quarto/projects/case-studies/high-precision-analog.html",
     "href": "quarto/projects/case-studies/high-precision-analog.html",
     "title": "High-Precision Analog",
     "section": "",
-    "text": "Peace Umolu\n\n\t\tElectronics & Computer Systems Engineer | Embedded Systems Developer\n\n\t\n\n\t\n\n\t\tHome\n\n\t\tAbout\n\n\t\tProjects\n\n\t\tBlog\n\n\t\tPara-Learn\n\n\t\tContact"
+    "text": "This project focuses on a precise embedded signal chain, from analog input sampling through signal processing and waveform generation."
   },
   {
     "objectID": "quarto/projects/case-studies/high-precision-analog.html#overview",
     "href": "quarto/projects/case-studies/high-precision-analog.html#overview",
     "title": "High-Precision Analog",
-    "section": "Overview",
-    "text": "Overview\nThis project focuses on a precise embedded signal chain, from analog input sampling through signal processing and waveform generation."
+    "section": "",
+    "text": "This project focuses on a precise embedded signal chain, from analog input sampling through signal processing and waveform generation."
   },
   {
     "objectID": "quarto/projects/case-studies/high-precision-analog.html#implementation",
@@ -39,7 +39,7 @@
     "href": "quarto/blog/posts/embedded-bring-up-notes.html",
     "title": "Notes on a Repeatable Embedded Bring-Up",
     "section": "",
-    "text": "Peace Umolu\n\n\t\tElectronics & Computer Systems Engineer | Embedded Systems Developer\n\n\t\n\n\t\n\n\t\tHome\n\n\t\tAbout\n\n\t\tProjects\n\n\t\tBlog\n\n\t\tPara-Learn\n\n\t\tContact\nEarly board bring-up is easier to debug when each step produces a result that can be checked independently. I start by confirming the toolchain and startup flow, then verify a simple GPIO behavior before adding peripheral drivers."
+    "text": "Early board bring-up is easier to debug when each step produces a result that can be checked independently. I start by confirming the toolchain and startup flow, then verify a simple GPIO behavior before adding peripheral drivers."
   },
   {
     "objectID": "quarto/blog/posts/embedded-bring-up-notes.html#a-small-useful-sequence",
@@ -53,21 +53,21 @@
     "href": "quarto/blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Peace Umolu\n\n\t\tElectronics & Computer Systems Engineer | Embedded Systems Developer\n\n\t\n\n\t\n\n\t\tHome\n\n\t\tAbout\n\n\t\tProjects\n\n\t\tBlog\n\n\t\tPara-Learn\n\n\t\tContact\n\n\t\n\n\n\n\n\n\n\nNew articles added to quarto/blog/posts/ appear here automatically after building the site.\n\n\n\n\n\n\n\n\n\nNotes on a Repeatable Embedded Bring-Up\n\n\n\nembedded-systems\n\nfirmware\n\ndebugging\n\n\n\nA short overview of the steps that make early firmware and board validation repeatable.\n\n\n\n\n\nOct 5, 2026\n\n\nPeace Umolu\n\n\n\n\n\nNo matching items"
+    "text": "Notes on a Repeatable Embedded Bring-Up\n\n\n\nembedded-systems\n\nfirmware\n\ndebugging\n\n\n\nA short overview of the steps that make early firmware and board validation repeatable.\n\n\n\n\n\nOct 5, 2026\n\n\nPeace Umolu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "quarto/projects/case-studies/foundation-toolchain.html",
     "href": "quarto/projects/case-studies/foundation-toolchain.html",
     "title": "Foundation and Toolchain",
     "section": "",
-    "text": "Peace Umolu\n\n\t\tElectronics & Computer Systems Engineer | Embedded Systems Developer\n\n\t\n\n\t\n\n\t\tHome\n\n\t\tAbout\n\n\t\tProjects\n\n\t\tBlog\n\n\t\tPara-Learn\n\n\t\tContact"
+    "text": "This project established a repeatable Cortex-M33 development workflow, from toolchain setup and startup code through debugger-based board bring-up."
   },
   {
     "objectID": "quarto/projects/case-studies/foundation-toolchain.html#overview",
     "href": "quarto/projects/case-studies/foundation-toolchain.html#overview",
     "title": "Foundation and Toolchain",
-    "section": "Overview",
-    "text": "Overview\nThis project established a repeatable Cortex-M33 development workflow, from toolchain setup and startup code through debugger-based board bring-up."
+    "section": "",
+    "text": "This project established a repeatable Cortex-M33 development workflow, from toolchain setup and startup code through debugger-based board bring-up."
   },
   {
     "objectID": "quarto/projects/case-studies/foundation-toolchain.html#implementation",
@@ -88,14 +88,14 @@
     "href": "quarto/projects/case-studies/integrated-system.html",
     "title": "Complete Integrated System",
     "section": "",
-    "text": "Peace Umolu\n\n\t\tElectronics & Computer Systems Engineer | Embedded Systems Developer\n\n\t\n\n\t\n\n\t\tHome\n\n\t\tAbout\n\n\t\tProjects\n\n\t\tBlog\n\n\t\tPara-Learn\n\n\t\tContact"
+    "text": "This project brings the measurement pipeline and peripheral interfaces together in a production-oriented embedded system architecture."
   },
   {
     "objectID": "quarto/projects/case-studies/integrated-system.html#overview",
     "href": "quarto/projects/case-studies/integrated-system.html#overview",
     "title": "Complete Integrated System",
-    "section": "Overview",
-    "text": "Overview\nThis project brings the measurement pipeline and peripheral interfaces together in a production-oriented embedded system architecture."
+    "section": "",
+    "text": "This project brings the measurement pipeline and peripheral interfaces together in a production-oriented embedded system architecture."
   },
   {
     "objectID": "quarto/projects/case-studies/integrated-system.html#implementation",

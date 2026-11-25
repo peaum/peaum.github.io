@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Review study points with spaced repetition and AI-assisted paraphrase feedback.">
 	<title>Para-Learn | Peace Umolu</title>
+	<script>document.documentElement.classList.add("js");</script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 568px)">
 	<link rel="stylesheet" href="css/paralearn.css">
-	<script src="js/mobile.js" defer></script>
+	<script src="js/site.js" defer></script>
 	<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js" defer></script>
 	<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js" defer></script>
 	<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js" defer></script>
@@ -19,20 +19,26 @@
 	<script src="paralearn.js" defer></script>
 </head>
 <body>
-	<div id="header">
-		<a href="index.html" class="logo" aria-label="Peace Umolu home">
-			<span class="brand-name">Peace Umolu</span>
-			<span class="brand-tagline">Electronics &amp; Computer Systems Engineer | Embedded Systems Developer</span>
-		</a>
-		<ul id="navigation" class="nav-menu">
-			<li><a href="index.html">home</a></li>
-			<li><a href="about.html">about</a></li>
-			<li><a href="gallery.html">projects</a></li>
-			<li><a href="blog.html">blog</a></li>
-			<li class="selected"><a href="paralearn.html" aria-current="page">Para-Learn</a></li>
-			<li><a href="contact.html">contact</a></li>
-		</ul>
-	</div>
+	<a class="skip-link" href="#paralearn">Skip to content</a>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="index.html" class="brand" aria-label="Peace Umolu home">
+				<span class="brand-name">Peace Umolu</span>
+				<span class="brand-tagline">Electronics &amp; Computer Systems Engineer | Embedded Systems Developer</span>
+			</a>
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bar"></span></button>
+			<nav id="site-nav" class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="gallery.html">Projects</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="paralearn.html" aria-current="page">Para-Learn</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<main id="paralearn" class="pl-page">
 		<section class="pl-intro">
 			<p class="pl-eyebrow">Spaced repetition · Active recall</p>
@@ -115,6 +121,17 @@
 			</div>
 		</section>
 	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>&copy; 2026 Peace Umolu · Built with &hearts; on GitHub Pages</p>
+			<ul class="footer-links">
+				<li><a href="https://github.com/peaum" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/peaum/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+				<li><a href="mailto:peaceumolu.ie@gmail.com">Email</a></li>
+			</ul>
+		</div>
+	</footer>
 
 	<dialog id="settings-dialog" class="pl-dialog" aria-labelledby="settings-heading">
 		<form id="settings-form" method="dialog">

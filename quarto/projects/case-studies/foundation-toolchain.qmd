@@ -1,6 +1,7 @@
 ---
 title: "Foundation and Toolchain"
 description: "Keil MDK, J-Link debugging, startup validation, and deterministic GPIO bring-up."
+image: "../../../images/project-foundation.svg"
 categories: [embedded-systems, firmware, debugging]
 ---
 

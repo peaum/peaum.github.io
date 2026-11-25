@@ -1,6 +1,7 @@
 ---
 title: "Blog"
 description: "Notes, guides, and lessons from embedded systems and computer engineering."
+toc: false
 listing:
   contents: posts
   sort: "date desc"
@@ -14,4 +15,3 @@ listing:
     - description
 ---
 
-New articles added to `quarto/blog/posts/` appear here automatically after building the site.

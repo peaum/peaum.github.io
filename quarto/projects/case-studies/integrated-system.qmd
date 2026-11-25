@@ -1,6 +1,7 @@
 ---
 title: "Complete Integrated System"
 description: "An integrated firmware architecture combining analog capture, sensors, and RTOS tasks."
+image: "../../../images/project-system.svg"
 categories: [embedded-systems, RTOS, system-design]
 ---
 

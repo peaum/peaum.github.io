@@ -1,6 +1,7 @@
 ---
 title: "High-Precision Analog"
 description: "Calibrated 16-bit ADC sampling, DAC waveform output, and digital filtering."
+image: "../../../images/project-analog.svg"
 categories: [embedded-systems, analog, firmware]
 ---
 

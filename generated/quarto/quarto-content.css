@@ -1,114 +1,402 @@
+/* Quarto pages (projects, blog): match the hand-written site in css/style.css. */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+	--pl-navy: #1a237e;
+	--pl-blue: #0d47a1;
+	--pl-cyan: #00bcd4;
+	--pl-cyan-ink: #00727f;
+	--pl-ink: #1c2033;
+	--pl-muted: #5b6275;
+	--pl-line: #dde3f0;
+	--pl-bg: #f4f6fb;
+	--pl-head: "Montserrat", "Segoe UI", system-ui, sans-serif;
+	--pl-body: "Open Sans", "Segoe UI", system-ui, sans-serif;
+}
+
 body {
-	background: #f5f5f5;
-	color: #212121;
-	font-family: "Open Sans", "Segoe UI", sans-serif;
-}
-
-#pl-site-header {
-	align-items: center;
-	background: #fff;
-	box-shadow: 0 3px 16px rgba(26, 35, 126, 0.12);
-	display: flex;
-	flex-wrap: wrap;
-	gap: 18px 32px;
-	justify-content: space-between;
-	padding: 18px max(24px, calc((100vw - 1100px) / 2));
-}
-
-#pl-site-header .pl-site-brand {
-	align-items: center;
-	color: #1a237e;
+	background:
+		radial-gradient(1200px 600px at 8% -10%, #dcf3ff 0%, rgba(220, 243, 255, 0) 60%),
+		radial-gradient(900px 500px at 100% 0%, #e8ebfa 0%, rgba(232, 235, 250, 0) 60%),
+		var(--pl-bg);
+	background-attachment: fixed;
+	color: var(--pl-ink);
 	display: flex;
 	flex-direction: column;
-	gap: 4px;
-	text-decoration: none;
-}
-
-.pl-site-brand-name,
-#pl-site-header nav a {
-	font-family: "Montserrat", "Segoe UI", sans-serif;
-	font-weight: 600;
-}
-
-.pl-site-brand-name {
-	font-size: 1.15rem;
-	letter-spacing: 0.12em;
-}
-
-.pl-site-brand-tagline {
-	color: #60677b;
-	font-size: 0.75rem;
-	text-align: center;
-}
-
-#pl-site-header nav {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px 20px;
-	justify-content: center;
-}
-
-#pl-site-header nav a {
-	color: #26315e;
-	text-decoration: none;
-}
-
-#pl-site-header nav a:hover {
-	color: #008da0;
+	font-family: var(--pl-body);
+	min-height: 100vh;
 }
 
 #quarto-content {
-	margin: 0 auto;
-	max-width: 1100px;
-	padding: 30px 24px 64px;
+	flex: 1 0 auto;
 }
 
-.quarto-title h1,
 h1,
 h2,
-h3 {
-	color: #1a237e;
-	font-family: "Montserrat", "Segoe UI", sans-serif;
+h3,
+h4,
+.quarto-title h1,
+.listing-title,
+.card-title {
+	color: var(--pl-navy);
+	font-family: var(--pl-head);
+}
+
+a {
+	color: var(--pl-navy);
+}
+
+a:hover {
+	color: var(--pl-cyan-ink);
+}
+
+/* ---------- Navbar ---------- */
+
+#quarto-header .navbar {
+	backdrop-filter: saturate(160%) blur(10px);
+	background: rgba(255, 255, 255, 0.9) !important;
+	border-bottom: 1px solid var(--pl-line);
+	box-shadow: none;
+	min-height: 76px;
+}
+
+#quarto-header .navbar-container {
+	margin: 0 auto;
+	max-width: 1120px;
+	padding: 0 24px;
+}
+
+#quarto-header .navbar-brand {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 0;
+}
+
+#quarto-header .navbar-title {
+	background: linear-gradient(120deg, var(--pl-navy), var(--pl-blue));
+	border-radius: 999px;
+	box-shadow: 0 6px 18px rgba(26, 35, 126, 0.2);
+	color: #fff !important;
+	font-family: var(--pl-head);
+	font-size: 0.95rem;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	padding: 7px 16px;
+	text-transform: uppercase;
+}
+
+#quarto-header .navbar-brand::after {
+	color: var(--pl-muted);
+	content: "Electronics & Computer Systems Engineer | Embedded Systems Developer";
+	font-family: var(--pl-body);
+	font-size: 0.74rem;
+	font-weight: 600;
+	padding-left: 4px;
+}
+
+#quarto-header .navbar-nav .nav-link {
+	border-radius: 8px;
+	color: var(--pl-ink) !important;
+	font-family: var(--pl-head);
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	padding: 10px 12px !important;
+	position: relative;
+	text-transform: uppercase;
+}
+
+#quarto-header .navbar-nav .nav-link:hover {
+	background: #eef6fa;
+	color: var(--pl-cyan-ink) !important;
+}
+
+#quarto-header .navbar-nav .nav-link.active {
+	color: var(--pl-cyan-ink) !important;
+}
+
+#quarto-header .navbar-nav .nav-link.active::after {
+	background: var(--pl-cyan);
+	border-radius: 2px;
+	bottom: 4px;
+	content: "";
+	height: 2px;
+	left: 12px;
+	position: absolute;
+	right: 12px;
+}
+
+#quarto-header .navbar-toggler {
+	border: 1px solid var(--pl-line);
+	border-radius: 10px;
+	padding: 8px 10px;
+}
+
+#quarto-header .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231a237e' stroke-linecap='round' stroke-width='2.4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---------- Page body ---------- */
+
+.quarto-title-block .quarto-title h1.title {
+	font-size: clamp(2rem, 4.5vw, 2.6rem);
+	font-weight: 700;
 }
 
 .quarto-title .description,
 .listing-description,
-.quarto-listing-category {
-	color: #60677b;
+.quarto-post .metadata,
+.listing-date,
+.listing-author {
+	color: var(--pl-muted);
 }
 
-.quarto-listing .card {
-	border: 1px solid #d9e1f3;
-	border-radius: 12px;
-	box-shadow: 0 8px 24px rgba(26, 35, 126, 0.07);
+#title-block-header {
+	margin-bottom: 1.5rem;
+	margin-top: 2.5rem;
 }
 
-.quarto-listing .card-title {
-	color: #1a237e;
-	font-family: "Montserrat", "Segoe UI", sans-serif;
+main.content h2 {
+	border-bottom: 1px solid var(--pl-line);
+	font-size: 1.45rem;
+	margin-top: 2.2rem;
+	padding-bottom: 0.4rem;
+}
+
+.quarto-category,
+.listing-category {
+	background: #e8f7fb !important;
+	border: 1px solid #c3ecf3 !important;
+	border-radius: 999px !important;
+	color: var(--pl-cyan-ink) !important;
+	font-size: 0.7rem !important;
 	font-weight: 600;
+	letter-spacing: 0.04em;
+	opacity: 1 !important;
+	padding: 2px 10px !important;
 }
 
-.quarto-listing .listing-categories .listing-category {
-	border-color: #00a5b8;
-	color: #007e8e;
+/* Grid listing (projects) */
+.quarto-grid-item.card {
+	background: #fff;
+	border: 1px solid var(--pl-line);
+	border-radius: 14px;
+	box-shadow: 0 2px 8px rgba(26, 35, 126, 0.06);
+	overflow: hidden;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-pre {
+.quarto-grid-item.card:hover {
+	box-shadow: 0 18px 40px rgba(26, 35, 126, 0.16);
+	transform: translateY(-4px);
+}
+
+.quarto-grid-item .card-img-top {
+	padding: 0 !important;
+}
+
+.quarto-grid-item .card-img-top img {
+	height: 100% !important;
+	object-fit: cover;
+	width: 100%;
+}
+
+.quarto-grid-item .card-body {
+	padding: 18px 20px 22px;
+}
+
+.quarto-grid-item .card-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+.quarto-grid-item .card-text {
+	color: var(--pl-muted);
+	font-size: 0.93rem;
+}
+
+/* Default listing (blog): no thumbnails, so drop the empty image column. */
+.quarto-post {
+	background: #fff;
+	border: 1px solid var(--pl-line) !important;
+	border-radius: 14px;
+	box-shadow: 0 2px 8px rgba(26, 35, 126, 0.06);
+	display: block !important;
+	margin-bottom: 18px;
+	padding: 22px 24px !important;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quarto-post:hover {
+	box-shadow: 0 18px 40px rgba(26, 35, 126, 0.12);
+	transform: translateY(-2px);
+}
+
+.quarto-post .thumbnail:empty,
+.quarto-post .thumbnail {
+	display: none;
+}
+
+.quarto-post a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.quarto-post h3.listing-title {
+	color: var(--pl-navy) !important;
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 0.4rem;
+}
+
+.quarto-post h3.listing-title a {
+	color: inherit !important;
+	font-weight: inherit;
+}
+
+.quarto-post:hover h3.listing-title {
+	color: var(--pl-cyan-ink) !important;
+}
+
+/* Category sidebar and table of contents */
+.quarto-listing-category-title,
+#toc-title {
+	color: var(--pl-navy);
+	font-family: var(--pl-head);
+	font-weight: 700;
+}
+
+.quarto-listing-category .category {
+	border-radius: 6px;
+	color: var(--pl-muted);
+	padding: 2px 6px;
+}
+
+.quarto-listing-category .category.active,
+.quarto-listing-category .category:hover {
+	background: #e8f7fb;
+	color: var(--pl-cyan-ink);
+}
+
+#TOC .nav-link.active {
+	border-left-color: var(--pl-cyan) !important;
+	color: var(--pl-cyan-ink) !important;
+}
+
+pre,
+div.sourceCode {
 	border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-	#pl-site-header {
+/* ---------- Footer ---------- */
+
+.nav-footer {
+	background: var(--pl-navy) !important;
+	border-top: 0 !important;
+	color: #dfe5ff !important;
+	margin: 0 !important;
+	padding: 28px max(24px, calc((100vw - 1072px) / 2)) !important;
+}
+
+.nav-footer .nav-footer-left,
+.nav-footer .nav-footer-left p {
+	color: #dfe5ff;
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.nav-footer .nav-footer-left,
+.nav-footer .nav-footer-right {
+	flex: 1 1 auto;
+}
+
+.nav-footer .nav-footer-center {
+	display: none;
+}
+
+.nav-footer .footer-items {
+	gap: 10px;
+}
+
+.nav-footer .footer-items .nav-link {
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 999px;
+	color: #7fe7f4 !important;
+	font-size: 0.88rem;
+	padding: 8px 16px !important;
+}
+
+.nav-footer .footer-items .nav-link:hover {
+	background: rgba(255, 255, 255, 0.14);
+	color: #fff !important;
+}
+
+/* ---------- Small screens ---------- */
+
+#quarto-header .navbar-brand-container,
+#quarto-header .navbar-brand {
+	background: transparent;
+	max-width: none;
+	overflow: visible;
+}
+
+@media (max-width: 767.98px) {
+	#quarto-header .navbar-container {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 12px 18px;
+	}
+
+	#quarto-header .navbar-brand-container {
+		flex: 1 1 auto;
+		margin: 0 !important;
+		order: 0;
+	}
+
+	#quarto-header .navbar-toggler {
+		margin-left: auto;
+		order: 1;
+	}
+
+	#quarto-header .navbar-collapse {
+		flex-basis: 100%;
+		order: 2;
+	}
+
+	#quarto-header .navbar-brand::after {
+		display: none;
+	}
+
+	.nav-footer .nav-footer-right,
+	.nav-footer .footer-items {
+		display: flex;
 		justify-content: center;
-		padding: 16px;
+		width: 100%;
 	}
 
-	#pl-site-header nav {
-		gap: 10px 14px;
+	#quarto-header .navbar-collapse {
+		padding: 8px 0 12px;
 	}
 
-	#quarto-content {
-		padding: 22px 16px 48px;
+	#quarto-header .navbar-nav .nav-link.active {
+		background: #eef9fc;
+	}
+
+	#quarto-header .navbar-nav .nav-link.active::after {
+		bottom: 10px;
+		height: auto;
+		left: 0;
+		right: auto;
+		top: 10px;
+		width: 3px;
+	}
+
+	.nav-footer {
+		flex-direction: column;
+		gap: 14px;
+		text-align: center;
 	}
 }

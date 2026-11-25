@@ -11,11 +11,16 @@ try {
 	New-Item -ItemType Directory -Path $temporaryQuarto -Force | Out-Null
 	Copy-Item -LiteralPath (Join-Path $repositoryRoot "_quarto.yml") -Destination $temporaryRoot
 	Copy-Item -LiteralPath (Join-Path $repositoryRoot "quarto\quarto-content.css") -Destination $temporaryQuarto
-	Copy-Item -LiteralPath (Join-Path $repositoryRoot "quarto\_includes") -Destination $temporaryQuarto -Recurse
+	# Project listing thumbnails reference the site's shared images folder.
+	Copy-Item -LiteralPath (Join-Path $repositoryRoot "images") -Destination $temporaryRoot -Recurse
 	Copy-Item -LiteralPath (Join-Path $repositoryRoot "quarto\blog") -Destination $temporaryQuarto -Recurse
 	Copy-Item -LiteralPath (Join-Path $repositoryRoot "quarto\projects") -Destination $temporaryQuarto -Recurse
 
-	$quarto = Get-Command quarto -ErrorAction Stop
+	$quarto = Get-Command quarto -ErrorAction SilentlyContinue
+	if (-not $quarto) {
+		# Fall back to the default per-user install location when quarto is not on PATH.
+		$quarto = Get-Command (Join-Path $env:LOCALAPPDATA "Programs\Quarto\bin\quarto.exe") -ErrorAction Stop
+	}
 	Push-Location $temporaryRoot
 	$locationPushed = $true
 	& $quarto.Source render

@@ -1,87 +1,71 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="About Peace Umolu — electronics engineering student specialising in computer systems and embedded firmware.">
 	<title>About | Peace Umolu</title>
+	<script>document.documentElement.classList.add("js");</script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
-	<script type="text/javascript" src="js/mobile.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/site.js" defer></script>
 </head>
 <body>
-	<div id="header">
-		<a href="index.html" class="logo" aria-label="Peace Umolu home">
-			<span class="brand-name">Peace Umolu</span>
-			<span class="brand-tagline">Electronics &amp; Computer Systems Engineer | Embedded Systems Developer</span>
-		</a>
-		<ul id="navigation" class="nav-menu">
-			<li>
-				<a href="index.html">home</a>
-			</li>
-			<li class="selected">
-				<a href="about.html">about</a>
-			</li>
-			<li>
-				<a href="gallery.html">projects</a>
-			</li>
-			<li>
-				<a href="paralearn.html">Para-Learn</a>
-			</li>
-			<li>
-				<a href="blog.html">blog</a>
-			</li>
-			<li>
-				<a href="contact.html">contact</a>
-			</li>
-		</ul>
-	</div>
-	<div id="body">
-		<h1><span>About Me</span></h1>
-		<div>
-			<img src="images/about-embedded.svg" alt="Engineer profile with firmware and hardware toolchain visuals">
-			<div class="article">
-				<h3>Hi, I&apos;m Peace Umolu</h3>
-				<p>
-					I&apos;m an Electronics Engineering student specializing in Computer Systems, focused on translating theory into deployable embedded products with measurable reliability.
-				</p>
-				<h3>My Background</h3>
-				<p>
-					My training combines analog and digital electronics, microcontroller architecture, and computer systems design. I enjoy building firmware that bridges hardware constraints and software clarity.
-				</p>
-				<!--
-				<h3>My Journey</h3>
-				<p>
-					From 2023 to 2026, I progressed from GPIO and board bring-up to precision analog pipelines and multi-peripheral architectures. Each year sharpened my debugging discipline, documentation practices, and system-level thinking.
-				</p>
-				-->
-				<h3>My Toolchain</h3>
-				<p>
-					I use Keil uVision, J-Link debugger, ARM Cortex-M33 workflows, logic analyzers, oscilloscopes, and versioned firmware practices. My stack emphasizes repeatable tests, robust memory use, and traceable interfaces.
-				</p>
-				<p>
-					<a href="assets/Peace-Umolu-Resume.pdf" class="more btn-primary">Download Resume</a>
-				</p>
-			</div>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="index.html" class="brand" aria-label="Peace Umolu home">
+				<span class="brand-name">Peace Umolu</span>
+				<span class="brand-tagline">Electronics &amp; Computer Systems Engineer | Embedded Systems Developer</span>
+			</a>
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bar"></span></button>
+			<nav id="site-nav" class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html" aria-current="page">About</a></li>
+					<li><a href="gallery.html">Projects</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="paralearn.html">Para-Learn</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
-	</div>
-	<div id="footer" class="footer">
-		<div>
-			<p>&copy; 2026 Peace Umolu. Built with &hearts; on GitHub Pages</p>
-			<ul>
-				<li>
-					<a href="https://github.com/peaceumollu" target="_blank" rel="noopener noreferrer">GitHub</a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com/in/peace-umollu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-				</li>
-				<li>
-					<a href="mailto:peace.umollu@gmail.com">Email</a>
-				</li>
+	</header>
+
+	<main id="main" class="container">
+		<section class="page-intro">
+			<p class="eyebrow">About me</p>
+			<h1>Hi, I&rsquo;m Peace Umolu</h1>
+			<p>I&rsquo;m an Electronics Engineering student specializing in Computer Systems, focused on translating theory into deployable embedded products with measurable reliability.</p>
+		</section>
+
+		<div class="about-layout">
+			<img class="about-art" src="images/about-embedded.svg" alt="Illustration of an engineer profile card with firmware and hardware toolchain elements">
+			<article class="article panel">
+				<h2>My background</h2>
+				<p>My training combines analog and digital electronics, microcontroller architecture, and computer systems design. I enjoy building firmware that bridges hardware constraints and software clarity.</p>
+				<!--
+				<h2>My journey</h2>
+				<p>From 2023 to 2026, I progressed from GPIO and board bring-up to precision analog pipelines and multi-peripheral architectures. Each year sharpened my debugging discipline, documentation practices, and system-level thinking.</p>
+				-->
+				<h2>My toolchain</h2>
+				<p>I use Keil uVision, J-Link debugger, ARM Cortex-M33 workflows, logic analyzers, oscilloscopes, and versioned firmware practices. My stack emphasizes repeatable tests, robust memory use, and traceable interfaces.</p>
+				<a href="assets/Peace-Umolu-Resume.pdf" class="btn btn-dark">Download resume</a>
+			</article>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>&copy; 2026 Peace Umolu · Built with &hearts; on GitHub Pages</p>
+			<ul class="footer-links">
+				<li><a href="https://github.com/peaum" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/peaum/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+				<li><a href="mailto:peaceumolu.ie@gmail.com">Email</a></li>
 			</ul>
 		</div>
-	</div>
+	</footer>
 </body>
 </html>

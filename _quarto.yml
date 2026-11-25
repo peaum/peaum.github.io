@@ -9,14 +9,36 @@ website:
   title: "Peace Umolu"
   site-url: "https://peaum.github.io/generated/"
   search: false
+  navbar:
+    title: "Peace Umolu"
+    logo-href: "../index.html"
+    collapse-below: md
+    right:
+      - text: "Home"
+        href: "../index.html"
+      - text: "About"
+        href: "../about.html"
+      - text: "Projects"
+        href: quarto/projects/index.qmd
+      - text: "Blog"
+        href: quarto/blog/index.qmd
+      - text: "Para-Learn"
+        href: "../paralearn.html"
+      - text: "Contact"
+        href: "../contact.html"
   page-footer:
-    left: "© 2026 Peace Umolu"
-    right: "Embedded Systems Developer"
+    left: "© 2026 Peace Umolu · Built with ♥ on GitHub Pages"
+    right:
+      - text: "GitHub"
+        href: "https://github.com/peaum"
+      - text: "LinkedIn"
+        href: "https://www.linkedin.com/in/peaum/"
+      - text: "Email"
+        href: "mailto:peaceumolu.ie@gmail.com"
 
 format:
   html:
     toc: true
     css: quarto/quarto-content.css
-    include-before-body: quarto/_includes/navbar.html
     code-fold: show
     theme: cosmo

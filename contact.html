@@ -1,74 +1,92 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Get in touch with Peace Umolu about embedded systems projects and collaboration.">
 	<title>Contact | Peace Umolu</title>
+	<script>document.documentElement.classList.add("js");</script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
-	<script type="text/javascript" src="js/mobile.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/site.js" defer></script>
 </head>
 <body>
-	<div id="header">
-		<a href="index.html" class="logo" aria-label="Peace Umolu home">
-			<span class="brand-name">Peace Umolu</span>
-			<span class="brand-tagline">Electronics &amp; Computer Systems Engineer | Embedded Systems Developer</span>
-		</a>
-		<ul id="navigation" class="nav-menu">
-			<li>
-				<a href="index.html">home</a>
-			</li>
-			<li>
-				<a href="about.html">about</a>
-			</li>
-			<li>
-				<a href="gallery.html">projects</a>
-			</li>
-			<li>
-				<a href="paralearn.html">Para-Learn</a>
-			</li>
-			<li>
-				<a href="blog.html">blog</a>
-			</li>
-			<li class="selected">
-				<a href="contact.html">contact</a>
-			</li>
-		</ul>
-	</div>
-	<div id="body">
-		<h1><span>Let&apos;s Build Something Reliable</span></h1>
-		<form action="contact.html">
-			<input type="text" name="fname" id="fname" value="name" aria-label="Name">
-			<input type="text" name="subject" id="subject" value="subject" aria-label="Subject">
-			<input type="text" name="email" id="email" value="email" aria-label="Email">
-			<textarea name="message" id="message" aria-label="Message">message</textarea>
-			<input type="submit" name="send" id="send" value="Send Message">
-		</form>
-		<div class="contact-info">
-			<h3>Contact Information</h3>
-			<p>Email: <a href="mailto:peace.umollu@gmail.com">peace.umollu@gmail.com</a></p>
-			<p>LinkedIn: <a href="https://www.linkedin.com/in/peace-umollu/" target="_blank" rel="noopener noreferrer">linkedin.com/in/peace-umollu</a></p>
-			<p>GitHub: <a href="https://github.com/peaceumollu" target="_blank" rel="noopener noreferrer">github.com/peaceumollu</a></p>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="index.html" class="brand" aria-label="Peace Umolu home">
+				<span class="brand-name">Peace Umolu</span>
+				<span class="brand-tagline">Electronics &amp; Computer Systems Engineer | Embedded Systems Developer</span>
+			</a>
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bar"></span></button>
+			<nav id="site-nav" class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="gallery.html">Projects</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="paralearn.html">Para-Learn</a></li>
+					<li><a href="contact.html" aria-current="page">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
-	</div>
-	<div id="footer" class="footer">
-		<div>
-			<p>&copy; 2026 Peace Umolu. Built with &hearts; on GitHub Pages</p>
-			<ul>
-				<li>
-					<a href="https://github.com/peaum" target="_blank" rel="noopener noreferrer">GitHub</a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com/in/peaum/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-				</li>
-				<li>
-					<a href="mailto:peaceumolu.ie@gmail.com">Email</a>
-				</li>
+	</header>
+
+	<main id="main" class="container">
+		<section class="page-intro">
+			<p class="eyebrow">Contact</p>
+			<h1>Let&rsquo;s build something reliable</h1>
+			<p>Have an embedded project, role, or collaboration in mind? Send a message and I&rsquo;ll get back to you.</p>
+		</section>
+
+		<div class="contact-layout">
+			<section class="panel" aria-label="Send a message">
+				<form id="contact-form" class="contact-form" action="mailto:peaceumolu.ie@gmail.com" method="post" enctype="text/plain" data-to="peaceumolu.ie@gmail.com">
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" placeholder="Your name" autocomplete="name" required>
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" placeholder="you@example.com" autocomplete="email" required>
+					</div>
+					<div class="field field-full">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" placeholder="What is this about?">
+					</div>
+					<div class="field field-full">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" placeholder="Tell me about your project or question" required></textarea>
+					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn btn-dark">Send message</button>
+						<p class="form-note">Opens your email app with the message ready to send.</p>
+					</div>
+				</form>
+			</section>
+
+			<aside class="panel contact-info" aria-labelledby="contact-info-heading">
+				<h2 id="contact-info-heading">Contact information</h2>
+				<ul class="contact-list">
+					<li><span>Email</span><a href="mailto:peaceumolu.ie@gmail.com">peaceumolu.ie@gmail.com</a></li>
+					<li><span>LinkedIn</span><a href="https://www.linkedin.com/in/peaum/" target="_blank" rel="noopener noreferrer">linkedin.com/in/peaum</a></li>
+					<li><span>GitHub</span><a href="https://github.com/peaum" target="_blank" rel="noopener noreferrer">github.com/peaum</a></li>
+				</ul>
+			</aside>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>&copy; 2026 Peace Umolu · Built with &hearts; on GitHub Pages</p>
+			<ul class="footer-links">
+				<li><a href="https://github.com/peaum" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/peaum/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+				<li><a href="mailto:peaceumolu.ie@gmail.com">Email</a></li>
 			</ul>
 		</div>
-	</div>
+	</footer>
 </body>
 </html>

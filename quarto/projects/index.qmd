@@ -1,16 +1,17 @@
 ---
 title: "Projects"
 description: "Engineering projects, implementation notes, and technical case studies."
+toc: false
 listing:
   contents: case-studies
   sort: "title asc"
-  type: default
+  type: grid
+  grid-columns: 3
+  image-height: 190px
   categories: true
   fields:
+    - image
     - title
     - categories
     - description
 ---
-
-Add project documentation as `.qmd` files in `quarto/projects/case-studies/`.
-Each published project links directly to its complete case study.
